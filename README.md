@@ -191,4 +191,3 @@ on <b> localhost:3000 </b>.
 
 <img src="homa_page.jpg">
 
-[For more UI Images](https://github.com/VonHumbolt/CineVisionMicroserviceProject/tree/main/frontend)
