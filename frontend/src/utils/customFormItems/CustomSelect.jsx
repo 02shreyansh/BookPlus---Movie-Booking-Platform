@@ -1,7 +1,7 @@
 import { Field, useField } from 'formik'
 import React from 'react'
 
-export default function KaanKaplanSelect({...props}) {
+export default function CustomSelect({...props}) {
 
     const [field, meta] = useField(props);
 

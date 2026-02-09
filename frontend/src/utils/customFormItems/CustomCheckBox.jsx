@@ -1,7 +1,7 @@
 import { Field, useField } from 'formik'
 import React from 'react'
 
-export default function KaanKaplanCheckBox({...props}) {
+export default function CustomCheckBox({...props}) {
 
     const [field, meta] = useField(props)
 

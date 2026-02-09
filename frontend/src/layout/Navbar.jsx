@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import LoginModal from '../pages/LoginModal';
@@ -31,18 +31,18 @@ export default function Navbar() {
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
             <Link to={"/"} style={{textDecoration:"none"}}>
-                <a class="navbar-brand"> CineVision </a>
+                <a class="navbar-brand"> BookPlus </a>
             </Link> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto align-items-center">
                         {userFromRedux?.roles[0] === "ADMIN" ? 
-                            <li class="nav-item"><a class="nav-link" href="#!" onClick={() => navigate("/addMovie")}>Film Ekle</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!" onClick={() => navigate("/addMovie")}>Add Movie</a></li>
                         : null}
 
                         <li class="nav-item"><a class="nav-link" href="#!"
                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                            Filmler</a></li>
+                            Movies</a></li>
                         
                         { userFromRedux ? <LoggedIn /> : <LoggedOut /> }
                     </ul>
@@ -81,7 +81,7 @@ export default function Navbar() {
                         <div className='col-sm-12 col-md-6'>
                             <div className='row justify-content-center align-items-start'>
                                 <div className='col-sm-7'>
-                                    <h3 className='text-start ms-3'>Vizyondakiler</h3>
+                                    <h3 className='text-start ms-3'>Now Showing</h3>
                                     {/* For loop sadece 5 tanesi*/}
                                     <div className='ms-3 mt-2'>
                                         {moviesInVision.map(movie => (
@@ -94,10 +94,10 @@ export default function Navbar() {
 
                                     </div>
                                     
-                                    <a href='#!' className='text-decoration-none'><strong> Tümü </strong> </a>
+                                    <a href='#!' className='text-decoration-none'><strong> ALL </strong> </a>
                                 </div>
                                 <div className='col-sm-5'>
-                                    <h3 className='text-start ms-3'>Yakında</h3>
+                                    <h3 className='text-start ms-3'>Coming Soon</h3>
                                     {/* For loop */}
                                     <div className='ms-3 mt-2'>
                                         {comingSoonMovies.map(movie => (
@@ -108,7 +108,7 @@ export default function Navbar() {
                                         ))}
 
                                     </div>
-                                    <a href='#!' className='text-decoration-none'><strong> Tümü </strong> </a>
+                                    <a href='#!' className='text-decoration-none'><strong> All </strong> </a>
                                 </div>
                             </div>
                         </div>

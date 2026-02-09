@@ -4,14 +4,14 @@ import * as yup from "yup";
 import { ActorService } from '../../services/actorService';
 import { useEffect } from 'react';
 import { CityService } from '../../services/cityService';
-import KaanKaplanSelect from '../../utils/customFormItems/KaanKaplanSelect';
+import CustomSelect from '../../utils/customFormItems/CustomSelect';
 import { CategoryService } from '../../services/categoryService';
 import { DirectorService } from '../../services/directorService';
-import KaanKaplanTextInput from '../../utils/customFormItems/KaanKaplanTextInput';
-import KaanKaplanTextArea from '../../utils/customFormItems/KaanKaplanTextArea';
+import CustomTextInput from '../../utils/customFormItems/CustomTextInput';
+import CustomTextArea from '../../utils/customFormItems/CustomTextArea';
 import { MovieService } from '../../services/movieService';
 import { useNavigate } from 'react-router-dom';
-import KaanKaplanCheckBox from '../../utils/customFormItems/KaanKaplanCheckBox';
+import CustomCheckBox from '../../utils/customFormItems/CustomCheckBox';
 import { useSelector } from 'react-redux';
 
 export default function AddMoviePage() {
@@ -90,29 +90,29 @@ export default function AddMoviePage() {
 
                 <Form>
                 <div class="form-floating mb-3">
-                    <KaanKaplanTextInput  type="text" name='movieName' class="form-control" id="floatingInput" placeholder="Film İsmi" />
+                    <CustomTextInput  type="text" name='movieName' class="form-control" id="floatingInput" placeholder="Film İsmi" />
                     <label for="floatingInput">Filmin İsmi</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <KaanKaplanTextArea name='description' class="form-control" id="floatingPassword" placeholder="Özet" />
+                    <CustomTextArea name='description' class="form-control" id="floatingPassword" placeholder="Özet" />
                     <label for="floatingPassword">Filmin Özeti</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <KaanKaplanTextInput  name='duration' type="number" class="form-control" id="duration" placeholder="Süre" />
+                    <CustomTextInput  name='duration' type="number" class="form-control" id="duration" placeholder="Süre" />
                     <label for="duration">Filmin Süresi</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <KaanKaplanTextInput name='releaseDate' type="date" class="form-control" id="releaseDate" placeholder="Vizyon Tarihi" />
+                    <CustomTextInput name='releaseDate' type="date" class="form-control" id="releaseDate" placeholder="Vizyon Tarihi" />
                     <label for="releaseDate">Vizyon Tarihi</label>
                 </div>
                 
                 <div class="form-floating mb-3">
-                    <KaanKaplanTextInput name='trailerUrl' type="text" class="form-control" id="trailerUrl" placeholder="Fragman Url" />
+                    <CustomTextInput name='trailerUrl' type="text" class="form-control" id="trailerUrl" placeholder="Fragman Url" />
                     <label for="trailerUrl">Fragman Url</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <KaanKaplanSelect
+                    <CustomSelect
                         id="categoryId"
                         className="form-select form-select-lg mb-3"
                         name="categoryId"
@@ -123,7 +123,7 @@ export default function AddMoviePage() {
                     <label for="categoryId">Kategori</label>
                 </div>  
                 <div class="form-floating mb-3">
-                    <KaanKaplanSelect
+                    <CustomSelect
                         id="directorId"
                         className="form-select form-select-lg mb-3"
                         name="directorId"
@@ -137,12 +137,12 @@ export default function AddMoviePage() {
 
                 <p>Yönetmen yukarıdaki listede bulunmuyorsa lütfen yazın.</p>
                 <div class="form-floating mb-3">
-                    <KaanKaplanTextInput name='directorName' type="text" class="form-control" id="directorName" placeholder="Yönetmen İsmi" />
+                    <CustomTextInput name='directorName' type="text" class="form-control" id="directorName" placeholder="Yönetmen İsmi" />
                     <label for="directorName">Yönetmen İsmi</label>
                 </div>
 
                 <div class="form-check mb-3 text-start">
-                    <KaanKaplanCheckBox name="isInVision" class="form-check-input" type="checkbox" id="isInVision" />
+                    <CustomCheckBox name="isInVision" class="form-check-input" type="checkbox" id="isInVision" />
                     <label class="form-check-label" for="isInVision">
                         Film Vizyonda Mı?
                     </label>

@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ActorService } from '../../services/actorService';
 import { CityService } from '../../services/cityService';
-import KaanKaplanSelect from '../../utils/customFormItems/KaanKaplanSelect'
-import KaanKaplanTextInput from '../../utils/customFormItems/KaanKaplanTextInput'
+import CustomSelect from '../../utils/customFormItems/CustomSelect'
+import CustomTextInput from '../../utils/customFormItems/CustomTextInput'
 import * as yup from "yup";
 import { MovieImageService } from '../../services/movieImageService';
 import { useSelector } from 'react-redux';
@@ -104,7 +104,7 @@ export default function AddActorsAndCityToMovie() {
 
                 <Form>
                     <div class="mb-3">
-                        <KaanKaplanSelect
+                        <CustomSelect
                             class="form-select form-select-lg mb-3"
                             name="actors"
                             multiple
@@ -116,17 +116,17 @@ export default function AddActorsAndCityToMovie() {
                     </div>
                     <p>Listede yoksa lütfen virgül ile ayırarak yazınız.</p>
                     <div class="form-floating mb-3">
-                        <KaanKaplanTextInput  type="text" name='actorName' class="form-control" id="floatingInput" placeholder="Aktörün İsmi" />
+                        <CustomTextInput  type="text" name='actorName' class="form-control" id="floatingInput" placeholder="Aktörün İsmi" />
                         <label for="floatingInput">Aktörün İsmi</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <KaanKaplanTextInput name='imageUrl' type="text" class="form-control" id="imageUrl" placeholder="Afiş Resmi Url" />
+                        <CustomTextInput name='imageUrl' type="text" class="form-control" id="imageUrl" placeholder="Afiş Resmi Url" />
                         <label for="imageUrl">Afiş Resmi Url</label>
                     </div>
 
                      <div class="mb-3">
-                        <KaanKaplanSelect 
+                        <CustomSelect 
                             class="form-select form-select-lg mb-3"
                             name="cities"
                             multiple

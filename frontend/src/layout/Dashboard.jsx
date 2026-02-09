@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
 import AddActorsAndCityToMovie from '../pages/admin/AddActorsAndCityToMovie'

@@ -1,13 +1,14 @@
 import { Field, useField } from 'formik'
 import React from 'react'
 
-export default function KaanKaplanTextInput({...props}) {
+export default function CustomTextArea({...props}) {
 
     const [field, meta] = useField(props)
 
   return (
 
-    <Field {...field} {...props} />
+    <Field as="textarea" {...field} {...props}>
 
+    </Field>
   )
 }
